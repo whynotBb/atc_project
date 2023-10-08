@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+    <g data-name="icon / 26 / navi / home">
+        <path style="fill:transparent;opacity:.451" d="M0 0h26v26H0z"/>
+        <g data-name="타원 1023" style="fill:#fff;stroke:#e5e5e5;stroke-width:1.5px">
+            <circle cx="13" cy="13" r="13" style="stroke:none"/>
+            <circle cx="13" cy="13" r="12.25" style="fill:none"/>
+        </g>
+        <path data-name="Rectangle 784" d="M195.97 159h-4.036v-5.424H190l6.99-7.576 7 7.577h-1.929V159h-4.031v-5.06h-2.06V159z" style="fill:#606060" transform="translate(-184 -140)"/>
+    </g>
+</svg>

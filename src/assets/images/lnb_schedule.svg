@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.239" height="20.038" viewBox="0 0 20.239 20.038">
+    <g data-name="Icon / 20 / schedule">
+        <path style="fill:none" d="M0 0h20v20H0z" transform="translate(0 .038)"/>
+        <path data-name="패스 23478" d="M9.221 19.7a.847.847 0 0 1-.651-.292.861.861 0 0 1-.213-.684l.285-2.212a2.527 2.527 0 0 1 .738-1.5l4.91-4.912a2.658 2.658 0 0 1 3.661 0 2.585 2.585 0 0 1 0 3.654l-4.911 4.91a2.548 2.548 0 0 1-1.5.733l-2.2.3z" transform="translate(.577 -.436)" style="stroke-miterlimit:10;stroke:#222;stroke-width:1.5px;fill:none"/>
+        <path data-name="패스 23479" d="M11.682 6.054h-7.12a.712.712 0 0 1 0-1.424h7.12a.712.712 0 0 1 0 1.424" transform="translate(.805 -.196)" style="fill:#222"/>
+        <path data-name="패스 23480" d="M11.682 9.205h-7.12a.712.712 0 0 1 0-1.424h7.12a.712.712 0 0 1 0 1.424" transform="translate(.805 -.356)" style="fill:#222"/>
+        <path data-name="패스 23481" d="M6.935 12.357H4.562a.712.712 0 0 1 0-1.424h2.373a.712.712 0 0 1 0 1.424" transform="translate(.805 -.515)" style="fill:#222"/>
+        <path data-name="패스 23482" d="M5.645 18.788h-3a1.9 1.9 0 0 1-1.9-1.9V2.649a1.9 1.9 0 0 1 1.9-1.9h10.637a1.9 1.9 0 0 1 1.9 1.9v4.016" transform="translate(.962)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#222;stroke-width:1.5px;fill:none"/>
+    </g>
+</svg>

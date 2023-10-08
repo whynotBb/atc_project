@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+    <defs>
+        <filter id="m5r3jslhya" x="1.635" y="8.929" width="38.446" height="28.018" filterUnits="userSpaceOnUse">
+            <feOffset dy="1.5"/>
+            <feGaussianBlur stdDeviation="1" result="blur"/>
+            <feFlood flood-opacity=".149"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="Ico / AGV/ 36">
+        <path style="fill:transparent" d="M0 0h42v42H0z"/>
+        <g style="filter:url(#m5r3jslhya)">
+            <g data-name="모양 1" style="fill:#b5b5b5" transform="translate(-.005 -.001)">
+                <path d="M1831.95 487.017h-19.454a7.96 7.96 0 0 0-5.496-5.496v-9.025a7.956 7.956 0 0 0 5.496-5.496h19.453a7.955 7.955 0 0 0 5.497 5.496v9.025a7.96 7.96 0 0 0-5.497 5.496z" style="stroke:none" transform="translate(-1801.36 -455.57)"/>
+                <path d="M1831.226 486.017a8.965 8.965 0 0 1 5.22-5.22v-7.578a8.962 8.962 0 0 1-5.22-5.219h-18.007a8.962 8.962 0 0 1-5.22 5.22v7.577a8.966 8.966 0 0 1 5.22 5.22h18.007m1.523 2h-21.052a6.972 6.972 0 0 0-5.697-5.697v-10.623a6.97 6.97 0 0 0 5.697-5.697h21.052a6.97 6.97 0 0 0 5.697 5.697v10.623a6.972 6.972 0 0 0-5.697 5.697z" style="fill:#fff;stroke:none" transform="translate(-1801.36 -455.57)"/>
+            </g>
+        </g>
+    </g>
+</svg>
