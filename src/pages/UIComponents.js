@@ -5,6 +5,10 @@ import SelectBox from "../components/UI/SelectBox";
 import DateRangePicker from "../components/UI/DatePicker";
 import Pagination from "../components/UI/Pagination";
 import AgTable from "../components/UI/AgTable";
+import WeatherIcon from "../components/UI/WeatherIcon";
+import VerticalToggle from "../components/UI/VerticalToggle";
+import Toggle from "../components/UI/Toggle";
+import FloorBtn from "./LiveControl/FloorBtn";
 const Wrap = styled.div`
     padding: 4rem;
     max-width: 192rem;
@@ -57,12 +61,31 @@ function UIComponents() {
             <h3>🌞check/radio</h3>
             <FlexRow>
                 <Checkbox id="saveId" label="Save your ID" />
+                <VerticalToggle
+                    id="isIndoor"
+                    label1="실내"
+                    label2="실외"
+                    defaultChecked
+                />
+                <Toggle id="toggle" label="AMR" defaultChecked />
+                <FloorBtn />
             </FlexRow>
             <hr />
             <h3>🌞input field</h3>
             <FlexRow>
                 <SelectBox optionData={optiondata01} />
                 <DateRangePicker />
+            </FlexRow>
+            <hr />
+            <h3>weather icon</h3>
+            <FlexRow>
+                <WeatherIcon className="sunny" />
+                <WeatherIcon className="cloudy" />
+                <WeatherIcon className="overcast" />
+                <WeatherIcon className="rainy" />
+                <WeatherIcon className="snow" />
+                <WeatherIcon className="shower" />
+                <WeatherIcon className="snowstorm" />
             </FlexRow>
             <hr />
             <h3>🌞pagination</h3>

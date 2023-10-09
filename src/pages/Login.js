@@ -70,7 +70,11 @@ function Login() {
                                     className="loginPW"
                                     placeholder="PASSWORD"
                                 />
-                                <Checkbox id="saveId" label="Save your ID" />
+                                <Checkbox
+                                    id="saveId"
+                                    label="Save your ID"
+                                    defaultChecked
+                                />
                                 <Button
                                     className="login"
                                     type="submit"

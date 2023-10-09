@@ -1,18 +1,18 @@
 import styled from "styled-components";
-import Button from "../components/UI/Button";
+import Button from "../../components/UI/Button";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import SelectBox from "../components/UI/SelectBox";
-import DateRangePicker from "../components/UI/DatePicker";
+import SelectBox from "../../components/UI/SelectBox";
+import DateRangePicker from "../../components/UI/DatePicker";
 // ag-grid 사용하는 컴포넌트에서는 아래 3개를 꼭 import 해야 합니다.
 import { AgGridReact } from "ag-grid-react";
 //ag-grid 기본 스타일
 import "ag-grid-community/styles/ag-grid.css";
 // ag-grid custom style
-import "../assets/css/ag-custom-style.css";
-import firstIcon from "../assets/images/page_first.svg";
-import lastIcon from "../assets/images/page_last.svg";
-import prevIcon from "../assets/images/page_prev.svg";
-import nextIcon from "../assets/images/page_next.svg";
+import "../../assets/css/ag-custom-style.css";
+import firstIcon from "../../assets/images/page_first.svg";
+import lastIcon from "../../assets/images/page_last.svg";
+import prevIcon from "../../assets/images/page_prev.svg";
+import nextIcon from "../../assets/images/page_next.svg";
 
 function LiveControlHistory() {
     const SearchBox = styled.div`

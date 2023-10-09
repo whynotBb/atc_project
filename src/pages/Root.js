@@ -10,6 +10,7 @@ function RootLayout() {
         background: #f4f6fa;
         min-height: 100vh;
         padding-top: 7.4rem;
+        padding: 7.4rem 0 11.6rem;
         main {
             width: 172rem;
             min-height: 84rem;

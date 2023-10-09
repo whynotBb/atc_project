@@ -12,6 +12,7 @@ function Header() {
         padding: 0 2rem;
         width: 100%;
         max-width: 256rem;
+        min-width: 100rem;
         position: fixed;
         z-index: 100;
         top: 0;

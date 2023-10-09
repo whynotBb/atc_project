@@ -2,6 +2,12 @@
 ## 사용된 라이브러리
 react date picker
 https://reactdatepicker.com/
+
+react slick slider
+https://react-slick.neostack.com/
+
+chart js 2
+https://react-chartjs-2.js.org/
 ---
 
 # Getting Started with Create React App

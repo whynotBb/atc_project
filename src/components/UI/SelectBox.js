@@ -88,6 +88,12 @@ function SelectBox({ optionData, className, readonly }) {
                 display: block;
             }
         }
+        &.lg {
+            p {
+                height: 4.6rem;
+                line-height: 4.4rem;
+            }
+        }
     `;
 
     return (

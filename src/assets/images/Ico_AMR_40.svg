@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <filter id="9ro3hkp2ta" x="5" y="6" width="30" height="30" filterUnits="userSpaceOnUse">
+            <feOffset dy="1"/>
+            <feGaussianBlur stdDeviation="1" result="blur"/>
+            <feFlood flood-opacity=".149"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="Ico / AMR / 40">
+        <path style="fill:transparent" d="M0 0h40v40H0z"/>
+        <g style="filter:url(#9ro3hkp2ta)">
+            <g data-name="타원 1" transform="translate(8 8)" style="fill:#b5b5b5;stroke:#fff;stroke-width:2px">
+                <circle cx="12" cy="12" r="12" style="stroke:none"/>
+                <circle cx="12" cy="12" r="11" style="fill:none"/>
+            </g>
+        </g>
+    </g>
+</svg>

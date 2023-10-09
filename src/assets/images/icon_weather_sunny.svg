@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="38" viewBox="0 0 52 38">
+    <g data-name="icon_weather">
+        <path style="fill:none" d="M0 0h52v38H0z"/>
+        <path data-name="패스 23495" d="M27.109 18A9.108 9.108 0 1 1 18 8.891 9.109 9.109 0 0 1 27.109 18" transform="translate(8 1)" style="fill:#fec02a"/>
+        <path data-name="패스 23496" d="M24 18a6 6 0 1 1-6-6 6 6 0 0 1 6 6" transform="translate(8 1)" style="fill:#ffcc50"/>
+        <path data-name="패스 23497" d="M18 5.745a.957.957 0 0 1-.957-.957V.958a.957.957 0 1 1 1.914 0v3.83a.957.957 0 0 1-.957.957" transform="translate(8 1)" style="fill:#fec02a"/>
+        <path data-name="패스 23498" d="M8.657 9.615a.958.958 0 0 1-.677-.28L5.272 6.627a.958.958 0 0 1 1.354-1.355L9.334 7.98a.958.958 0 0 1-.677 1.635" transform="translate(8 1)" style="fill:#fec02a"/>
+        <path data-name="패스 23499" d="M4.787 18.957H.957a.958.958 0 0 1 0-1.915h3.83a.958.958 0 0 1 0 1.915" transform="translate(8 1)" style="fill:#fec02a"/>
+        <path data-name="패스 23500" d="M5.949 31.008a.958.958 0 0 1-.677-1.635l2.708-2.708a.958.958 0 0 1 1.354 1.355l-2.708 2.708a.958.958 0 0 1-.677.28" transform="translate(8 1)" style="fill:#fec02a"/>
+        <path data-name="패스 23501" d="M18 36a.957.957 0 0 1-.957-.957v-3.83a.957.957 0 1 1 1.914 0v3.83A.957.957 0 0 1 18 36" transform="translate(8 1)" style="fill:#fec02a"/>
+        <path data-name="패스 23502" d="M30.051 31.008a.958.958 0 0 1-.677-.28l-2.708-2.708a.958.958 0 0 1 1.354-1.355l2.708 2.708a.958.958 0 0 1-.677 1.635" transform="translate(8 1)" style="fill:#fec02a"/>
+        <path data-name="패스 23503" d="M35.043 18.957h-3.83a.958.958 0 0 1 0-1.915h3.83a.958.958 0 0 1 0 1.915" transform="translate(8 1)" style="fill:#fec02a"/>
+        <path data-name="패스 23504" d="M27.343 9.615a.958.958 0 0 1-.677-1.635l2.708-2.708a.958.958 0 0 1 1.354 1.355L28.02 9.335a.958.958 0 0 1-.677.28" transform="translate(8 1)" style="fill:#fec02a"/>
+    </g>
+</svg>

@@ -9,8 +9,8 @@ import Login from "./pages/Login";
 import { createGlobalStyle } from "styled-components";
 import UIComponents from "./pages/UIComponents";
 import PageList from "./pages/PageList";
-import LiveControl from "./pages/LiveControl";
-import LiveControlHistory from "./pages/LiveControlHistory";
+import LiveControl from "./pages/LiveControl/LiveControl";
+import LiveControlHistory from "./pages/LiveControl/LiveControlHistory";
 const router = createBrowserRouter([
     {
         path: "/",

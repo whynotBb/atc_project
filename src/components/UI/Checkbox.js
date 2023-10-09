@@ -3,7 +3,7 @@ import deselectedIcon from "../../assets/images/check-box.svg";
 import selectedIcon from "../../assets/images/check-box-selected.svg";
 import disabledIcon from "../../assets/images/check-box-disabled.svg";
 
-function Checkbox({ id, label, checked, disabled }) {
+function Checkbox({ id, label, defaultChecked, disabled }) {
     const CheckBox = styled.div`
         display: inline-block;
         input {
@@ -38,7 +38,7 @@ function Checkbox({ id, label, checked, disabled }) {
             <input
                 type="checkbox"
                 id={id}
-                checked={checked}
+                defaultChecked={defaultChecked}
                 disabled={disabled}
             />
             <label htmlFor={id}>{label}</label>
