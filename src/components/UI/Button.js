@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-function Button({ type, value, className, disabled }) {
+function Button({ type, value, className, disabled, onClick }) {
     // ↓ 퍼블단에서 화면 확인만을 위해 작성한 코드 입니다.
     //   추후 개발단에서 수정 해 주세요
     // className 조합
@@ -34,7 +34,8 @@ function Button({ type, value, className, disabled }) {
             background: #f9f9f9;
             border-color: #e1e1e1;
         }
-        &.login {
+        &.login,
+        &.xl {
             width: 100%;
             height: 6rem;
             border-radius: 3rem;
@@ -46,6 +47,10 @@ function Button({ type, value, className, disabled }) {
             &:hover {
                 border-color: ${({ theme }) => theme.colors.primary};
             }
+        }
+        &.xl {
+            font-size: 2rem;
+            font-weight: 600;
         }
         &.primary {
             background: ${({ theme }) => theme.colors.primaryLight};
@@ -76,7 +81,12 @@ function Button({ type, value, className, disabled }) {
         }
     `;
     return (
-        <Btn className={combinedClassName} type={type} disabled={disabled}>
+        <Btn
+            className={combinedClassName}
+            type={type}
+            disabled={disabled}
+            onClick={onClick}
+        >
             {value}
         </Btn>
     );

@@ -3,7 +3,7 @@ import IconToggleOn from "../../assets/images/toggle_on.svg";
 import IconToggleOff from "../../assets/images/toggle_off.svg";
 import disabledIcon from "../../assets/images/check-box-disabled.svg";
 
-function Toggle({ id, label, defaultChecked }) {
+function Toggle({ id, label, defaultChecked, className }) {
     const Toggle = styled.div`
         display: inline-block;
         input {
@@ -31,9 +31,16 @@ function Toggle({ id, label, defaultChecked }) {
             text-align: left;
             transition: all 0.3s;
         }
+        &.reverse {
+            label {
+                padding-left: 0;
+                padding-right: 5rem;
+                background-position: right center;
+            }
+        }
     `;
     return (
-        <Toggle>
+        <Toggle className={className}>
             <input type="checkbox" id={id} defaultChecked={defaultChecked} />
             <label htmlFor={id}>{label}</label>
         </Toggle>

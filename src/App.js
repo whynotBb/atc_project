@@ -9,8 +9,18 @@ import Login from "./pages/Login";
 import { createGlobalStyle } from "styled-components";
 import UIComponents from "./pages/UIComponents";
 import PageList from "./pages/PageList";
-import LiveControl from "./pages/LiveControl/LiveControl";
-import LiveControlHistory from "./pages/LiveControl/LiveControlHistory";
+import LiveControl from "./pages/liveControl/LiveControl";
+import LiveControlHistory from "./pages/liveControl/LiveControlHistory";
+import ProductionSchedule from "./pages/schedule/ProductionSchedule";
+import ScheduleScenario from "./pages/schedule/ScheduleScenario";
+import ObjectStatistics from "./pages/statistics/ObjectStatistics";
+import WorkshopStatistics from "./pages/statistics/WorkshopStatistics";
+import ServiceEnterprise from "./pages/service/ServiceEnterprise";
+import ServiceSite from "./pages/service/ServiceSite";
+import ServiceUser from "./pages/service/ServiceUser";
+import SettingAuth from "./pages/setting/SettingAuth";
+import SettingCommonCode from "./pages/setting/SettingCommonCode";
+import SettingCustomCode from "./pages/setting/SettingCustomCode";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -28,10 +38,51 @@ const router = createBrowserRouter([
                 path: "livehistory",
                 element: <LiveControlHistory />,
             },
+            {
+                path: "productionschedule",
+                element: <ProductionSchedule />,
+            },
+            {
+                path: "schedulescenario",
+                element: <ScheduleScenario />,
+            },
+            {
+                path: "objectstatistics",
+                element: <ObjectStatistics />,
+            },
+            {
+                path: "workshopstatistics",
+                element: <WorkshopStatistics />,
+            },
+            {
+                path: "serviceenterprise",
+                element: <ServiceEnterprise />,
+            },
+            {
+                path: "servicesite",
+                element: <ServiceSite />,
+            },
+            {
+                path: "serviceuser",
+                element: <ServiceUser />,
+            },
+            {
+                path: "settingauth",
+                element: <SettingAuth />,
+            },
+            {
+                path: "settingcommoncode",
+                element: <SettingCommonCode />,
+            },
+            {
+                path: "settingcustomcode",
+                element: <SettingCustomCode />,
+            },
+            { path: "/uiComponents", element: <UIComponents /> },
         ],
     },
     { path: "/login", element: <Login /> },
-    { path: "/uiComponents", element: <UIComponents /> },
+
     { path: "/pageList", element: <PageList /> },
 ]);
 const GlobalStyle = createGlobalStyle`
@@ -182,6 +233,33 @@ const GlobalStyle = createGlobalStyle`
 /* 스크롤바 뒷 배경 설정*/
 ::-webkit-scrollbar-track {
   background-color: rgba(245, 245, 245, 0.5);
+}
+.required{
+  color: ${({ theme }) => theme.colors.secondary};
+}
+table{
+  width: 100%;
+  border-top: 2px solid ${({ theme }) => theme.colors.primaryDark};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borderDark};
+  th,td{
+    height: 5rem;
+    line-height: 4.8rem;
+    padding: 0 2rem;
+    border-top: 1px solid ${({ theme }) => theme.colors.border};
+  }
+  th{
+    background: #f7f8fa;
+    font-weight: 500;
+    padding: 0 3.2rem;
+    text-align: left;
+  }
+  tr{
+    &:first-child{
+      th,td{
+        border-top: 0;
+      }
+    }
+  }
 }
 `;
 

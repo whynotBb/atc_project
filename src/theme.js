@@ -35,6 +35,11 @@ const common = {
     justify-contents: center;
     align-items: center;
   `,
+    ellipsis: `
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  `,
 };
 
 const theme = {

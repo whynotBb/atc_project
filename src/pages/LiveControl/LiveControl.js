@@ -11,6 +11,9 @@ import FloorBtn from "./FloorBtn";
 import ImgMap from "../../assets/images/map_sample.png";
 import IconAmr from "../../assets/images/Ico_AMR_40.svg";
 import IconAgv from "../../assets/images/Ico_AGV_40.svg";
+import Modal from "../../components/UI/Modal";
+import { useState } from "react";
+import Button from "../../components/UI/Button";
 
 function LiveControl() {
     const Now = styled.div`
@@ -23,7 +26,7 @@ function LiveControl() {
             line-height: 2.4rem;
         }
     `;
-    const DashbordWrap = styled.div`
+    const DashboardWrap = styled.div`
         display: flex;
         gap: 2.4rem;
         height: 70rem;
@@ -120,6 +123,9 @@ function LiveControl() {
             position: absolute;
             top: 1.8rem;
             right: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
         }
     `;
     const LegendWrap = styled.div`
@@ -226,12 +232,89 @@ function LiveControl() {
             overflow-y: auto;
 
             li {
+                cursor: pointer;
                 height: 4.8rem;
                 line-height: 4.8rem;
                 padding: 0 2rem;
                 color: ${({ theme }) => theme.colors.gray1};
+                ${({ theme }) => theme.common.ellipsis}
                 &:nth-child(2n) {
                     background: #f7f8fa;
+                }
+            }
+        }
+    `;
+    const ObjectDetailWrap = styled.div`
+        .detailBox {
+            border-top: 1px solid #e5e5e5;
+            padding-top: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            &:first-child {
+                border-top: 0;
+                padding-top: 0;
+            }
+            h4 {
+                font-size: 1.8rem;
+                line-height: 2.1rem;
+                font-weight: 500;
+            }
+            .batteryStatus {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 1.8rem;
+                line-height: 2.1rem;
+                font-weight: bold;
+            }
+            .toggle {
+                li {
+                    margin-top: 1.6rem;
+                    &:first-child {
+                        margin-top: 2rem;
+                    }
+                    & > div {
+                        width: 100%;
+                        label {
+                            width: 100%;
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            color: ${({ theme }) => theme.colors.gray1};
+                        }
+                    }
+                }
+            }
+            .status {
+                display: flex;
+                gap: 1rem;
+                margin-top: 2rem;
+                li {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    flex: 1;
+                    color: ${({ theme }) => theme.colors.gray1};
+                    height: 3.6rem;
+                    line-height: 3.4rem;
+                    border: 1px solid ${({ theme }) => theme.colors.border};
+                    text-align: center;
+                    border-radius: 0.4rem;
+                }
+            }
+            .workList {
+                margin-top: 2rem;
+                border-top: 1px solid ${({ theme }) => theme.colors.border};
+                li {
+                    height: 5rem;
+                    line-height: 4.8rem;
+                    border-bottom: 1px solid
+                        ${({ theme }) => theme.colors.border};
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    color: ${({ theme }) => theme.colors.gray1};
+                    span {
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -245,14 +328,22 @@ function LiveControl() {
         { key: "02-0", value: "직업사이트 선택" },
         { key: "02-1", value: "option" },
     ];
-
+    // 모달여닫기
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const openModalHandler = () => {
+        setIsModalOpen(true);
+    };
+    const closeModalHandler = () => {
+        console.log("bottom click");
+        setIsModalOpen(false);
+    };
     return (
         <section>
             <Now>
                 <div className="updateTime">2023.07.07 Monday 14:06:10</div>
                 <Weather />
             </Now>
-            <DashbordWrap>
+            <DashboardWrap>
                 <WorkStatusWrap>
                     <WorkStatus>
                         <h3>작업 현황</h3>
@@ -329,19 +420,87 @@ function LiveControl() {
                         <h4>무인 이동체 목록</h4>
                         <div className="listBox">
                             <ul>
-                                <li>WKVAMR0001</li>
-                                <li>WKVAMR0002</li>
-                                <li>WKVAGV0001</li>
-                                <li>WKVAMR0003</li>
-                                <li>WKVAGV0002</li>
-                                <li>WKVAGV0020</li>
-                                <li>WKVAGV0300</li>
-                                <li>WKVAGV0311</li>
+                                <li onClick={openModalHandler}>WKVAMR0001</li>
+                                <li onClick={openModalHandler}>
+                                    WKVAMR0002WKVAMR0002
+                                </li>
+                                <li onClick={openModalHandler}>WKVAGV0001</li>
+                                <li onClick={openModalHandler}>WKVAMR0003</li>
+                                <li onClick={openModalHandler}>WKVAGV0002</li>
+                                <li onClick={openModalHandler}>WKVAGV0020</li>
+                                <li onClick={openModalHandler}>WKVAGV0300</li>
+                                <li onClick={openModalHandler}>WKVAGV0311</li>
                             </ul>
                         </div>
                     </ObjectList>
                 </OptionWrap>
-            </DashbordWrap>
+            </DashboardWrap>
+            {isModalOpen && (
+                <Modal close={closeModalHandler} title="WKVAMR0001">
+                    <ObjectDetailWrap className="body">
+                        <div className="detailBox">
+                            <h4>배터리 성능</h4>
+                            <b className="batteryStatus">80%</b>
+                        </div>
+                        <div className="detailBox">
+                            <h4>무인체 제어</h4>
+                            <ul className="toggle">
+                                <li>
+                                    <Toggle
+                                        id="stop"
+                                        className="reverse"
+                                        label="정지"
+                                        defaultChecked
+                                    />
+                                </li>
+                                <li>
+                                    <Toggle
+                                        id="move"
+                                        className="reverse"
+                                        label="기동"
+                                    />
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="detailBox">
+                            <h4>현재 작업 진행</h4>
+                            <ul className="status">
+                                <li>UNLOAD</li>
+                                <li>UNASSIGN</li>
+                                <li>READY</li>
+                            </ul>
+                        </div>
+                        <div className="detailBox">
+                            <h4>작업 목록</h4>
+                            <ul className="workList">
+                                <li>
+                                    <span>2023-04-27 13:20</span>
+                                    <span>예정</span>
+                                </li>
+                                <li>
+                                    <span>2023-04-27 13:20</span>
+                                    <span>진행중</span>
+                                </li>
+                                <li>
+                                    <span>2023-04-27 13:20</span>
+                                    <span>예정</span>
+                                </li>
+                                <li>
+                                    <span>2023-04-27 13:20</span>
+                                    <span>예정</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </ObjectDetailWrap>
+                    <div className="footer">
+                        <Button
+                            className="xl"
+                            value="확인"
+                            onClick={closeModalHandler}
+                        />
+                    </div>
+                </Modal>
+            )}
         </section>
     );
 }

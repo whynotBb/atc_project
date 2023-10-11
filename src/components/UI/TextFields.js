@@ -9,22 +9,23 @@ function TextFields({
     disabled,
     error,
     errorTxt,
+    value,
 }) {
     /* 
-      type: text, password, Number
-      disabled : disabled
-      className : loginId,loginPW - 로그인
-      error : 유효성검사에서 error - error="error"
-      errorTxt : 에러메시지
-      // 사용 예시
-      <TextFields
-          type="text"
-          className="loginId"
-          placeholder="ID"
-          disabled
-          error="error"
-          errorTxt="에러메시지"
-      />
+    type: text, password, Number
+    disabled : disabled
+    className : loginId,loginPW - 로그인
+    error : 유효성검사에서 error - error="error"
+    errorTxt : 에러메시지
+    // 사용 예시
+    <TextFields
+        type="text"
+        className="loginId"
+        placeholder="ID"
+        disabled
+        error="error"
+        errorTxt="에러메시지"
+    />
     */
     // className 과 error 조합
     let classNames = [];
@@ -110,6 +111,9 @@ function TextFields({
                     theme.colors.secondary} !important;
             }
         }
+        &.w100 {
+            width: 100%;
+        }
     `;
     const ErrorMsg = styled.p`
         color: ${({ theme }) => theme.colors.secondary};
@@ -126,6 +130,7 @@ function TextFields({
                         type={type}
                         placeholder={placeholder}
                         disabled={disabled}
+                        value={value}
                     />
                 </TextField>
                 {errorTxt && <ErrorMsg>{errorTxt}</ErrorMsg>}

@@ -8,7 +8,9 @@ import AgTable from "../components/UI/AgTable";
 import WeatherIcon from "../components/UI/WeatherIcon";
 import VerticalToggle from "../components/UI/VerticalToggle";
 import Toggle from "../components/UI/Toggle";
-import FloorBtn from "./LiveControl/FloorBtn";
+import FloorBtn from "./liveControl/FloorBtn";
+import { useState } from "react";
+import Modal from "../components/UI/Modal";
 const Wrap = styled.div`
     padding: 4rem;
     max-width: 192rem;
@@ -41,8 +43,17 @@ function UIComponents() {
     //select box 의 샘플 데이터
     const optiondata01 = [
         { key: "01-0", value: "전체" },
-        { key: "01-1", value: "option" },
+        { key: "01-1", value: "option글자수가 길면 말줄임 처리" },
     ];
+    // 모달여닫기
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const openModalHandler = () => {
+        setIsModalOpen(true);
+    };
+    const closeModalHandler = () => {
+        console.log("bottom click");
+        setIsModalOpen(false);
+    };
     return (
         <Wrap>
             <h2>
@@ -87,6 +98,21 @@ function UIComponents() {
                 <WeatherIcon className="shower" />
                 <WeatherIcon className="snowstorm" />
             </FlexRow>
+            <hr />
+            <h3>Modal</h3>
+            <Button onClick={openModalHandler} value="modal open" />
+            {isModalOpen && (
+                <Modal close={closeModalHandler} title="WKVAMR0001">
+                    <div className="body">모달 내용</div>
+                    <div className="footer">
+                        <Button
+                            className="xl"
+                            value="확인"
+                            onClick={closeModalHandler}
+                        />
+                    </div>
+                </Modal>
+            )}
             <hr />
             <h3>🌞pagination</h3>
             <Pagination />

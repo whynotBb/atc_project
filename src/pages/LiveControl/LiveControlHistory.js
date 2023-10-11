@@ -51,6 +51,10 @@ function LiveControlHistory() {
             color: ${({ theme }) => theme.colors.gray1};
             font-weight: 500;
         }
+        /* 20231011 스타일추가 */
+        & > div {
+            width: 18rem;
+        }
     `;
     const Counter = styled.div`
         display: flex;

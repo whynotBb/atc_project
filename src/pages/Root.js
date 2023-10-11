@@ -30,6 +30,21 @@ function RootLayout() {
                     border-bottom: 2px solid #222;
                     margin-bottom: 2rem;
                 }
+                .btnTitle {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    margin-bottom: 1.6rem;
+                    h3 {
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        line-height: 2.1rem;
+                    }
+                    .btnWrap {
+                        display: flex;
+                        gap: 0.8rem;
+                    }
+                }
             }
         }
     `;

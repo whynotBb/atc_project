@@ -26,6 +26,7 @@ function SelectBox({ optionData, className, readonly }) {
         cursor: pointer;
         position: relative;
         min-width: 18rem;
+        width: 22.4rem;
         p {
             height: 4rem;
             line-height: 3.8rem;
@@ -37,6 +38,7 @@ function SelectBox({ optionData, className, readonly }) {
             font-size: 1.5rem;
             font-weight: 500;
             position: relative;
+            ${({ theme }) => theme.common.ellipsis}
             &::after {
                 content: "";
                 display: block;
@@ -70,6 +72,7 @@ function SelectBox({ optionData, className, readonly }) {
                 line-height: 4rem;
                 font-size: 1.5rem;
                 font-weight: 500;
+                ${({ theme }) => theme.common.ellipsis}
                 color: ${({ theme }) => theme.colors.gray2};
                 &:hover {
                     background: #f9f9f9;
